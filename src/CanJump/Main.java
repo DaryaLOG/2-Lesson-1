@@ -14,19 +14,6 @@ public class Main {
         Treadmill treadmill = new Treadmill();
         wall.height = 17;
         treadmill.length = 87;
-        cat.jumpHeight = 18;
-        cat.runLength = 39;
-        cat.shootSpeed = 20;
-        cat.shakesLength = 186;
-        human.jumpHeight = 9;
-        human.runLength = 115;
-        human.shootSpeed = 87;
-        human.shakesLength = 42;
-        robot.jumpHeight = 17;
-        robot.runLength = 87;
-        robot.shootSpeed = 90;
-        robot.shakesLength = 14;
-
 
         wall.anybodyJumps(cat);
         wall.anybodyJumps(human);

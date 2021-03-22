@@ -1,10 +1,17 @@
 package CanJump;
 
 public class Cat implements CanJump, CanRun, CanShoot, CanShakes {
-    public int jumpHeight;
-    public int runLength;
-    public int shootSpeed;
-    public int shakesLength;
+    private int jumpHeight;
+    private int runLength;
+    private int shootSpeed;
+    private int shakesLength;
+
+    public Cat(int jumpHeight, int runLength, int shootSpeed, int shakesLength) {
+        this.jumpHeight = jumpHeight;
+        this.runLength = runLength;
+        this.shootSpeed = shootSpeed;
+        this.shakesLength = shakesLength;
+    }
 
     @Override
     public void jump(int height) {
@@ -24,18 +31,49 @@ public class Cat implements CanJump, CanRun, CanShoot, CanShakes {
         }
     }
 
+    public void setJumpHeight(int jumpHeight) {
+        this.jumpHeight = jumpHeight;
+    }
+
+    public void setRunLength(int runLength) {
+        this.runLength = runLength;
+    }
+
+    public void setShootSpeed(int shootSpeed) {
+        this.shootSpeed = shootSpeed;
+    }
+
+    public void setShakesLength(int shakesLength) {
+        this.shakesLength = shakesLength;
+    }
+
     @Override
     public double shakes(int length) {
-        return shakesLength;
+        return shakesLength * length;
     }
 
     @Override
     public double shoot(int speed) {
 
-        return shootSpeed;
+        return shootSpeed * speed;
     }
 
 
+    public int getJumpHeight() {
+        return jumpHeight;
+    }
+
+    public int getRunLength() {
+        return runLength;
+    }
+
+    public int getShootSpeed() {
+        return shootSpeed;
+    }
+
+    public int getShakesLength() {
+        return shakesLength;
+    }
 }
 
 

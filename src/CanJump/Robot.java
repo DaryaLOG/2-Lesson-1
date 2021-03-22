@@ -15,6 +15,29 @@ public class Robot implements CanJump, CanRun, CanShoot, CanShakes {
         }
     }
 
+    public int getJumpHeight() {
+        return jumpHeight;
+    }
+
+    public int getRunLength() {
+        return runLength;
+    }
+
+    public int getShootSpeed() {
+        return shootSpeed;
+    }
+
+    public Robot(int jumpHeight, int runLength, int shootSpeed, int shakesLength) {
+        this.jumpHeight = jumpHeight;
+        this.runLength = runLength;
+        this.shootSpeed = shootSpeed;
+        this.shakesLength = shakesLength;
+    }
+
+    public int getShakesLength() {
+        return shakesLength;
+    }
+
     @Override
     public void run(int length) {
         if (runLength >= length) {
@@ -26,13 +49,13 @@ public class Robot implements CanJump, CanRun, CanShoot, CanShakes {
 
     @Override
     public double shakes(int length) {
-        return 0;
+        return shakesLength * length;
     }
 
     @Override
     public double shoot(int speed) {
 
-        return 0;
+        return shootSpeed * speed;
     }
 
 
